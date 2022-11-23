@@ -13,7 +13,7 @@ public class Echo3DHologram : MonoBehaviour
 {
     private string secKey = "<YOUR_SECURITY_KEY>";
     // Your echo3D API key
-    [Tooltip("Required - echo3D project API key. Exmaple: 'some-word-1234'")]
+    [Tooltip("Required - echo3D project API key. Example: 'some-word-1234'")]
     public string apiKey = API_KEY_PLACEHOLDER;
 
     [Tooltip("Entry IDs separated by comma without spaces. (Optional)")]
@@ -39,12 +39,11 @@ public class Echo3DHologram : MonoBehaviour
     [HideInInspector]
     public Database queryData;
 
-    private const string API_KEY_PLACEHOLDER = "<YOUR_API_KEY>";
+    private const string API_KEY_PLACEHOLDER = "hidden-silence-7637";
 
     void Start()
     {
         StartCoroutine(LoadFromEcho3D());
-
     }
 
     public void EditorLoad()

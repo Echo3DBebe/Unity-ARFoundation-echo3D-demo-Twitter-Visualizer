@@ -28,7 +28,10 @@ public class CustomBehaviour : MonoBehaviour
         // Add RemoteTransformations script to object and set its entry
         if (!disableRemoteTransformations)
         {
-            this.gameObject.AddComponent<RemoteTransformations>().entry = entry;
+            // Set Rotation to parent
+            this.gameObject.transform.rotation = this.gameObject.transform.parent.transform.rotation;
+            // Set Scale
+            this.gameObject.transform.localScale = new Vector3(0.001f, 0.001f, 0.001f);
         }
 
         // Qurey additional data to get the name
